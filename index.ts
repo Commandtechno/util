@@ -16,3 +16,7 @@ export function isEqual(item1, item2) {
 export function isOdd( num) {
   return num % 2 != 0
 }
+
+export function isNotEqual(item1, item2) {
+  return item1 != item2; 
+}
