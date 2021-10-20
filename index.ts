@@ -17,6 +17,10 @@ export function isOdd( num) {
   return num % 2 != 0
 }
 
+export function isEven(num) {
+  return !isOdd(num)
+}
+
 export function isNotEqual(item1, item2) {
-  return item1 != item2; 
+  return item1 != item2;
 }
