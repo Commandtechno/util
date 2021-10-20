@@ -18,6 +18,10 @@ export function isOdd( num) {
 }
 
 export function isEven(num) {
+  return num % 2== 0
+}
+
+export function isNotOdd(num){
   return !isOdd(num)
 }
 
