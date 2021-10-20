@@ -1,0 +1,7 @@
+{
+  "name": "theutilyes",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc index -D"
+  }
+}
