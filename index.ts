@@ -5,7 +5,7 @@ export function parseEmoji(emoji) {
   return ":" + name + ":";
 };
 
-export function isDirectory() {
+export function isDirectory(path) {
   return fs.lstatSync(path).isDirectory();
 }
 
