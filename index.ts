@@ -8,3 +8,7 @@ export function parseEmoji (emoji) {
 export function isDirectory () {
   return fs.lstatSync(path).isDirectory();
 }
+
+export function isEqual(item1, item2) {
+  return item1 == item2; 
+}
