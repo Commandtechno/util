@@ -17,7 +17,7 @@ export function isOdd( num) {
   return num % 2 != 0
 }
 
-function isNotOdd(num){
+export function isNotOdd(num){
   return !isOdd(num)
 }
 
