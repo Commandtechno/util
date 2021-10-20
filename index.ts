@@ -26,5 +26,5 @@ export function isNotOdd(num){
 }
 
 export function isNotEqual(item1, item2) {
-  return item1 != item2;
+  return !isEqual(item1, item2);
 }
