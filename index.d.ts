@@ -1,7 +1,3 @@
-const obj = {a: {b: {c: 1, d: 2}}};
-type ObjAsDotNotation = DotNotation<typeof obj>
-type LocationOfDotNotation = DotToPropType<typeof obj, 'a.b'>;
-
 /**
  * Validate dot notation against an object
  * 
