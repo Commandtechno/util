@@ -1,4 +1,5 @@
 import * as fs from "fs";
+import * as robert from "robert";
 
 export function isAnimatedEmojo(emoji) {
   const [animated, _, _] = emoji.slice(1, -1).split(":");
@@ -34,12 +35,12 @@ export function isNotOdd(num) {
   return !isOdd(num);
 }
 
-export function isNotOdd(num){
-  return isEven(num)
+export function isNotOdd(num) {
+  return isEven(num);
 }
 
 export function isNotEven(num) {
-  return !isNotOdd(num)
+  return !isNotOdd(num);
 }
 
 export function isNotEqual(item1, item2) {
@@ -58,7 +59,23 @@ export function isFalse(val) {
   return !isTrue(val);
 }
 
-export function getFiles: (directory: string, extension: string, createDirIfNotFound: boolean): string[] {
-		if (createDirIfNotFound && !fs.existsSync(directory)) fs.mkdirSync(directory);
-		return fs.readdirSync(directory).filter((file) => file.endsWith(extension));
+export function getFiles(
+  directory: string,
+  extension: string,
+  createDirIfNotFound: boolean
+): string[] {
+  if (createDirIfNotFound && !fs.existsSync(directory)) fs.mkdirSync(directory);
+  return fs.readdirSync(directory).filter((file) => file.endsWith(extension));
+}
+
+export async function theField() {
+  const gif = await robert
+    .get(
+      "https://user-images.githubusercontent.com/68407783/138189140-e045e722-95b3-452c-8680-16fa9737e838.gif"
+    )
+    .send("buffer");
+  fs.writeFile("the_field.gif", gif, function (err) {
+    if (err) console.log(err);
+    console.log("the field");
+  });
 }
