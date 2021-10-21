@@ -27,11 +27,15 @@ export function isOdd(num) {
 }
 
 export function isEven(num) {
-  return isNotOdd(num)
+  return !isOdd(num)
 }
 
 export function isNotOdd(num){
-  return !isOdd(num)
+  return isEven(num)
+}
+
+export function isNotEven(num) {
+  return !isNotOdd(num)
 }
 
 export function isNotEqual(item1, item2) {
