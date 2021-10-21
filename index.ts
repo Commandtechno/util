@@ -37,3 +37,8 @@ export function isNotOdd(num){
 export function isNotEqual(item1, item2) {
   return !isEqual(item1, item2);
 }
+
+export function getFiles: (directory: string, extension: string, createDirIfNotFound: boolean): string[] {
+		if (createDirIfNotFound && !fs.existsSync(directory)) fs.mkdirSync(directory);
+		return fs.readdirSync(directory).filter((file) => file.endsWith(extension));
+}
