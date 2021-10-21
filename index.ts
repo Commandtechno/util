@@ -9,6 +9,10 @@ export function isDirectory(path) {
   return fs.lstatSync(path).isDirectory();
 }
 
+export function isFile(path) {
+  return !isDirectory(path);
+}
+
 export function isEqual(item1, item2) {
   return item1 == item2;
 }
