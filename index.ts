@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+import * as fs from "fs";
 
 export function isAnimatedEmojo(emoji) {
   const [animated, _, _] = emoji.slice(1, -1).split(":");
@@ -23,17 +23,29 @@ export function isEqual(item1, item2) {
 }
 
 export function isOdd(num) {
-  return num % 2 != 0
+  return num % 2 != 0;
 }
 
 export function isEven(num) {
-  return isNotOdd(num)
+  return isNotOdd(num);
 }
 
-export function isNotOdd(num){
-  return !isOdd(num)
+export function isNotOdd(num) {
+  return !isOdd(num);
 }
 
 export function isNotEqual(item1, item2) {
   return !isEqual(item1, item2);
+}
+
+export function toBoolean(item) {
+  return !!item;
+}
+
+export function isTrue(val) {
+  return toBoolean(val) ? true : false;
+}
+
+export function isFalse(val) {
+  return !isTrue(val);
 }
