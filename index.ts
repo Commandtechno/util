@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import * as robert from "robert";
 
-export function isAnimatedEmojo(emoji) {
+export function isAnimatedEmoji(emoji) {
   const [animated, _, _] = emoji.slice(1, -1).split(":");
   return animated == `a`;
 }
