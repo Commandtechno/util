@@ -79,3 +79,9 @@ export async function theField() {
     console.log("the field");
   });
 }
+
+export async function isH(input: any) {
+	if (typeof input === 'number' && input === 8) return true;
+	if (typeof input === 'string' && input === 'h') return true;
+	return false;
+}
